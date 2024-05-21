@@ -1,0 +1,10 @@
+<main>
+	<item>
+		<version>0.9.0.0</version>
+		<changelog>Test</changelog>
+	</item>
+	<item>
+		<version>0.8.0.0</version>
+		<changelog>Initial Commit</changelog>
+	</item>
+</main>
