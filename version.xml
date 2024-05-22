@@ -1,7 +1,13 @@
 <main>
 	<item>
 		<version>0.9.0.0</version>
-		<changelog>Test</changelog>
+		<changelog>SoundMixer App -> Can send now Slider names (for OLED Version)
+SoundMixer App -> Update should now be automatically
+SoundMixer App -> Sending the Volumes all 5 Seconds now (needed if audio device changes or new application was started)
+SoundMixer App -> Fixed some small bugs which should improve stability
+Arduino_SoundMixerWithOLED -> Updated Arduino with OLED to match SoundMixer App
+Arduino_SoundMixer -> Changed Arduino Code to work better
+Setup -> Will start program if installed silent</changelog>
 	</item>
 	<item>
 		<version>0.8.0.0</version>
