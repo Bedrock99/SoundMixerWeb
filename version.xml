@@ -1,5 +1,12 @@
 <main>
 	<item>
+		<version>0.9.0.2</version>
+		<changelog>Setup will start program if installed silent
+SoundMixer App -> Fixed changelog formatting
+SoundMixer App -> Added .Net Framework to Setup and upgraded App from 4.6.1 to 4.6.2
+</changelog>
+	</item>
+	<item>
 		<version>0.9.0.0</version>
 		<changelog>SoundMixer App -> Can send now Slider names (for OLED Version)
 SoundMixer App -> Update should now be automatically
