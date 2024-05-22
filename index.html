@@ -21,7 +21,7 @@
             background-color: #f8f9fa;
             padding: 20px 0;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -38,35 +38,42 @@
                     <li>Die zugehörige Software wird kontinuierlich weiterentwickelt und verbessert. Regelmäßige Updates sorgen dafür, dass die Hardware immer auf dem neuesten Stand bleibt und neue Funktionen sowie Optimierungen bietet. Die Software ist benutzerfreundlich gestaltet und ermöglicht eine einfache Konfiguration und Anpassung der Drehregler und Displays.</li>
                 </ul>
                 <p>Mit dieser Hardware erhalten Sie eine flexible und leistungsfähige Lösung zur Steuerung der Windows-Lautstärke. Ob Sie nur einen oder bis zu sieben Drehregler benötigen, die Möglichkeit der Integration von OLED-Displays und die fortlaufende Verbesserung der Software sorgen dafür, dass Sie Ihre Audioeinstellungen stets im Griff haben. Diese Hardware ist perfekt für alle, die Wert auf eine präzise und individuelle Lautstärkeregelung legen.</p>
-                <div class="mt-4">
-                    <a href="#" class="btn btn-primary btn-lg mr-2 disabled">Kaufen auf ...</a>
-                    <a href="https://github.com/Bedrock99/SoundMixerWeb/releases" class="btn btn-secondary btn-lg mr-2">Download von Github</a>
-					<a href="https://github.com/Bedrock99/SoundMixer/issues" class="btn btn-secondary btn-lg mr-2">Bug- Reports auf Github</a>
+                <div class="row">
+					<div class="col-4">
+						<a href="#" class="btn btn-primary btn-lg btn-block mr-2 disabled">Kaufen auf ...</a>
+					</div>
+					<div class="col-4">
+						<a href="https://github.com/Bedrock99/SoundMixerWeb/releases/latest/download/SoundMixer.Setup.v0.9.0.2.exe " class="btn btn-secondary btn-lg btn-block">Download der neusten Version</a>
+						<a href="https://github.com/Bedrock99/SoundMixerWeb/releases" class="btn btn-secondary btn-block mt-1">Alle Versionen auf Github</a>
+					</div>
+					<div class="col-4">
+						<a href="https://github.com/Bedrock99/SoundMixer/issues" class="btn btn-secondary btn-lg btn-block">Bug- Reports auf Github</a>
+					</div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-2">
             <div class="col-12">
                 <h2>Bildergalerie</h2>
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 1">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 1">
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 2">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 2">
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 3">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 3">
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 4">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 4">
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 5">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 5">
             </div>
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 6">
+                <img src="pics/800.png" class="img-fluid mb-3 gallery-img" alt="Bild 6">
             </div>
         </div>
     </div>
@@ -125,7 +132,7 @@
             document.querySelectorAll('.gallery-img').forEach(function(img) {
                 img.addEventListener('click', function() {
                     modal.style.display = 'block';
-                    modalImage.src = this.src.replace('350', '800'); // Assume larger image is available
+                    modalImage.src = this.src; // Assume larger image is available
                 });
             });
             
