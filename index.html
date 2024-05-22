@@ -1,5 +1,144 @@
-<html>
-	<body>
-		<h1>Kommt noch...</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .modal-img {
+            width: 100%;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+		footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1>SoundMixer</h1>
+                <p class="lead">Diese innovative Hardware ermöglicht eine präzise Steuerung der Windows-Lautstärke und bietet eine flexible Lösung für alle, die ihre Audioeinstellungen optimieren möchten. Die Hardware ist ideal für Musikliebhaber, Gamer, Content-Creator und professionelle Audio-Techniker.</p>
+                <ul>
+                    <li>Die Hardware ist mit einer variablen Anzahl von Drehreglern erhältlich, je nach Bedarf und Präferenz des Benutzers. Es können 1 bis 7 Regler integriert werden, um die Lautstärke verschiedener Anwendungen oder Ausgabegeräte individuell zu steuern.</li>
+                    <li>Jeder Drehregler kann optional mit einem OLED-Display ausgestattet werden. Diese Displays zeigen wichtige Informationen wie die aktuelle Lautstärke, den Namen der gesteuerten Anwendung oder benutzerdefinierte Symbole an. Die hochauflösenden OLED-Displays sorgen für eine klare und gut lesbare Anzeige auch bei schlechten Lichtverhältnissen.</li>
+                    <li>Die zugehörige Software wird kontinuierlich weiterentwickelt und verbessert. Regelmäßige Updates sorgen dafür, dass die Hardware immer auf dem neuesten Stand bleibt und neue Funktionen sowie Optimierungen bietet. Die Software ist benutzerfreundlich gestaltet und ermöglicht eine einfache Konfiguration und Anpassung der Drehregler und Displays.</li>
+                </ul>
+                <p>Mit dieser Hardware erhalten Sie eine flexible und leistungsfähige Lösung zur Steuerung der Windows-Lautstärke. Ob Sie nur einen oder bis zu sieben Drehregler benötigen, die Möglichkeit der Integration von OLED-Displays und die fortlaufende Verbesserung der Software sorgen dafür, dass Sie Ihre Audioeinstellungen stets im Griff haben. Diese Hardware ist perfekt für alle, die Wert auf eine präzise und individuelle Lautstärkeregelung legen.</p>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-primary btn-lg mr-2 disabled">Kaufen auf ...</a>
+                    <a href="https://github.com/Bedrock99/SoundMixerWeb/releases" class="btn btn-secondary btn-lg mr-2">Download von Github</a>
+					<a href="https://github.com/Bedrock99/SoundMixer/issues" class="btn btn-secondary btn-lg mr-2">Bug- Reports auf Github</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2>Bildergalerie</h2>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 1">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 2">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 3">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 4">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 5">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350" class="img-fluid mb-3 gallery-img" alt="Bild 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal für Bilder-->
+    <div id="imageModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="close-btn">&times;</span>
+                    <img src="" id="modalImage" class="modal-img">
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bedrock99. Alle Rechte vorbehalten.</p>
+			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#impressumModal">Impressum</button>
+        </div>
+    </footer>
+	
+	<!-- Modal für Impressum -->
+    <div id="impressumModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Impressum</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hier steht das Impressum deines Unternehmens.</p>
+                    <p>Name des Unternehmens</p>
+                    <p>Adresse</p>
+                    <p>Telefonnummer</p>
+                    <p>Email</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to handle image click and modal display
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('imageModal');
+            var modalImage = document.getElementById('modalImage');
+            var closeBtn = document.querySelector('.close-btn');
+            
+            document.querySelectorAll('.gallery-img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modalImage.src = this.src.replace('350', '800'); // Assume larger image is available
+                });
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            modal.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
 </html>
