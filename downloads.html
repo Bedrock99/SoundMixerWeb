@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixer - Downloads</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+		body {
+            padding-top: 70px; /* Höhe der festen Navbar berücksichtigen */
+        }
+    </style>
+</head>
+<body>
+	<!-- Header mit Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">SoundMixer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Startseite</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="downloads.html">Downloads <span class="sr-only">(current)</span></a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="issues.html">Bug- Reports</a>
+                </li>
+            </ul>
+        </div>
+		<a href="#" class="btn btn-primary btn-lg mr-2 disabled">Kaufen auf ...</a>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <h1>Alle Downloads</h1>
+                <p class="lead">Hier finden Sie alle verfügbaren Versionen zum Download.</p>
+                
+                <ul class="list-group mt-4" id="releaseList">
+                    <!-- Releases werden hier von JavaScript eingefügt -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+   <footer class="bg-dark text-light">
+        <div class="container">
+            <span>&copy; 2024 Bedrock99. Alle Rechte vorbehalten.</span><br>
+			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#impressumModal">Impressum</button>
+        </div>
+    </footer>
+
+    <!-- Modal für Impressum -->
+    <div id="impressumModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Impressum</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hier steht das Impressum deines Unternehmens.</p>
+                    <p>Name des Unternehmens</p>
+                    <p>Adresse</p>
+                    <p>Telefonnummer</p>
+                    <p>Email</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const repoOwner = 'Bedrock99';
+            const repoName = 'SoundMixerWeb';
+
+            $.ajax({
+                url: `https://api.github.com/repos/${repoOwner}/${repoName}/releases`,
+                method: 'GET',
+                success: function(releases) {
+                    const releaseList = $('#releaseList');
+                    
+                    releases.forEach((release, index) => {
+                        const listItem = $(`
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="lead">${release.name}</span>
+                                    <div>
+                                        <a href="${release.assets[0].browser_download_url}" class="btn btn-secondary">Download</a>
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#changelog${index}" aria-expanded="false" aria-controls="changelog${index}">Changelog</button>
+                                    </div>
+                                </div>
+                                <div id="changelog${index}" class="collapse mt-2">
+                                    <ul>${release.body.split('\n').map(line => `<li>${line}</li>`).join('')}</ul>
+                                </div>
+                            </li>
+                        `);
+
+                        releaseList.append(listItem);
+                    });
+                },
+                error: function() {
+                    $('#releaseList').append('<li class="list-group-item">Fehler beim Laden der Releases.</li>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

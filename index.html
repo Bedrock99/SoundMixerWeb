@@ -18,20 +18,43 @@
             cursor: pointer;
         }
 		footer {
-            background-color: #f8f9fa;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
             margin-top: 10px;
+        }
+		body {
+            padding-top: 70px; /* Höhe der festen Navbar berücksichtigen */
         }
     </style>
 </head>
 <body>
-
-    <div class="container mt-5">
+	<!-- Header mit Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">SoundMixer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Startseite <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="downloads.html">Downloads</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="issues.html">Bug- Reports</a>
+                </li>
+            </ul>
+        </div>
+		<a href="#" class="btn btn-primary btn-lg mr-2 disabled">Kaufen auf ...</a>
+    </nav>
+	
+    <div class="container mt-3">
         <div class="row">
             <div class="col-12">
-                <h1>SoundMixer</h1>
-                <p class="lead">Diese innovative Hardware ermöglicht eine präzise Steuerung der Windows-Lautstärke und bietet eine flexible Lösung für alle, die ihre Audioeinstellungen optimieren möchten. Die Hardware ist ideal für Musikliebhaber, Gamer, Content-Creator und professionelle Audio-Techniker.</p>
+                <h1>Was ist der SoundMixer?</h1>
+                <p class="lead">Der SoundMixer ist eine innovative Hardware, die eine präzise Steuerung der Windows-Lautstärke ermöglicht und bietet eine flexible Lösung für alle, die ihre Audioeinstellungen optimieren möchten. Die Hardware ist ideal für Musikliebhaber, Gamer, Content-Creator und professionelle Audio-Techniker.</p>
                 <ul>
                     <li>Die Hardware ist mit einer variablen Anzahl von Drehreglern erhältlich, je nach Bedarf und Präferenz des Benutzers. Es können 1 bis 7 Regler integriert werden, um die Lautstärke verschiedener Anwendungen oder Ausgabegeräte individuell zu steuern.</li>
                     <li>Jeder Drehregler kann optional mit einem OLED-Display ausgestattet werden. Diese Displays zeigen wichtige Informationen wie die aktuelle Lautstärke, den Namen der gesteuerten Anwendung oder benutzerdefinierte Symbole an. Die hochauflösenden OLED-Displays sorgen für eine klare und gut lesbare Anzeige auch bei schlechten Lichtverhältnissen.</li>
@@ -43,11 +66,10 @@
 						<a href="#" class="btn btn-primary btn-lg btn-block mr-2 disabled">Kaufen auf ...</a>
 					</div>
 					<div class="col-4">
-						<a href="https://github.com/Bedrock99/SoundMixerWeb/releases/latest/download/SoundMixer.Setup.v0.9.0.2.exe " class="btn btn-secondary btn-lg btn-block">Download der neusten Version</a>
-						<a href="https://github.com/Bedrock99/SoundMixerWeb/releases" class="btn btn-secondary btn-block mt-1">Alle Versionen auf Github</a>
+						<a href="downloads.html" class="btn btn-secondary btn-lg btn-block">Download</a>
 					</div>
 					<div class="col-4">
-						<a href="https://github.com/Bedrock99/SoundMixer/issues" class="btn btn-secondary btn-lg btn-block">Bug- Reports auf Github</a>
+						<a href="issues.html" class="btn btn-secondary btn-lg btn-block">Bug- Reports</a>
 					</div>
                 </div>
             </div>
@@ -91,9 +113,9 @@
     </div>
 	
 	<!-- Footer -->
-    <footer>
+    <footer class="bg-dark text-light">
         <div class="container">
-            <p>&copy; 2024 Bedrock99. Alle Rechte vorbehalten.</p>
+            <span>&copy; 2024 Bedrock99. Alle Rechte vorbehalten.</span><br>
 			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#impressumModal">Impressum</button>
         </div>
     </footer>
