@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundMixer - Bug- Reports</title>
+    <title>SoundMixer - Fehlerberichte</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         footer {
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="downloads.html">Downloads</a>
                 </li>
 				<li class="nav-item active">
-                    <a class="nav-link" href="issues.html">Bug- Reports <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="issues.html">Fehlerberichte <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -45,8 +45,8 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-12">
-                <h1>Alle Bug- Reports</h1>
-                <p class="lead">Hier finden Sie alle Bug- Reports.</p>
+                <h1>Alle Fehlerberichte</h1>
+                <p class="lead">Hier finden Sie alle Fehlerberichte.</p>
                 
                 <ul class="list-group mt-4" id="issueList">
                     <!-- Issues werden hier von JavaScript eingefügt -->
@@ -54,7 +54,7 @@
 				
 				</br>
                 <a href="https://github.com/Bedrock99/SoundMixerWeb/issues/new"  target="_blank">
-					<button type="button" class="btn btn-primary mb-3">Neuen Bug-Report erstellen</button>
+					<button type="button" class="btn btn-primary mb-3">Neuen Fehlerbericht erstellen</button>
 				</a>
 			</div>
         </div>
@@ -134,11 +134,11 @@
 					}
 					else
 					{
-						$('#issueList').append('<li class="list-group-item">Keine Bug- Reports gefunden.</li>');
+						$('#issueList').append('<li class="list-group-item">Keine Fehlerberichte gefunden.</li>');
 					}
                 },
                 error: function() {
-                    $('#issueList').append('<li class="list-group-item">Fehler beim Laden der Bug- Reports.</li>');
+                    $('#issueList').append('<li class="list-group-item">Fehler beim Laden der Fehlerberichte.</li>');
                 }
             });
         });
